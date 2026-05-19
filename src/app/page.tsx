@@ -32,6 +32,9 @@ type CustomItem = { title: string; price: string; description: string };
 
 const SANITY_PROJECT_ID = "mx8xtgih";
 const SANITY_DATASET = "production";
+const ASSET_BASE_PATH = process.env.NODE_ENV === "production" ? "/Isha_Doshi" : "";
+
+const assetPath = (path: string) => `${ASSET_BASE_PATH}${path}`;
 
 const DEFAULT_CONTENT: Content = {
   brandName: "UDAAN",
@@ -143,7 +146,7 @@ export default function HomePage() {
       <header className="site-header">
         <div className="wrap nav-wrap">
           <a href="#home" className="brand brand-logo-link" aria-label="UDAAN Home">
-            <Image src="/udaan-logo.png" alt="UDAAN logo" width={180} height={158} className="nav-logo" priority />
+            <Image src={assetPath("/udaan-logo.png")} alt="UDAAN logo" width={180} height={158} className="nav-logo" priority />
           </a>
           <nav>
             <a href="#home">Home</a>
@@ -178,7 +181,7 @@ export default function HomePage() {
           </div>
           <aside className="founder-card card">
             <Image
-              src="/founder-photo.jpg"
+              src={assetPath("/founder-photo.jpg")}
               alt="Isha Doshi – Founder"
               fill
               sizes="(max-width: 980px) 92vw, 30vw"
