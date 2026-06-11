@@ -37,14 +37,14 @@ const ASSET_BASE_PATH = process.env.NODE_ENV === "production" ? "/Isha_Doshi" : 
 const assetPath = (path: string) => `${ASSET_BASE_PATH}${path}`;
 
 const DEFAULT_CONTENT: Content = {
-  brandName: "UDAAN",
-  tagline: "The/ We are the bridge between 'what ifs' and what's next",
+  brandName: "Udaan",
+  tagline: "The bridge between what ifs and what's next",
   aboutBrand:
-    "UDAAN Career Counseling is where we stop ghosting your potential and start building your future. Most counselors give you a generic map; we give you a lens to see the paths the herd ignores. If you're tired of being pushed into 'safe' choices, we're here to decode the career that matches your psychological DNA. We serve as the definitive bridge between your 'what ifs' and a 'Customized' 'what's next.' At UDAAN, we don't just provide guidance, we provide the clarity to launch your most authentic self.",
+    "Udaan is where we stop ghosting your potential and start building your future. Most counselors give you a generic map; we give you a lens to see the paths the herd ignores. If you're tired of being pushed into 'safe' choices, we're here to decode the career that matches your psychological DNA. We serve as the definitive bridge between your what ifs and a customized what's next. At Udaan, we don't just provide guidance, we provide the clarity to launch your most authentic self.",
   mode: "HYBRID",
   founderName: "ISHA DOSHI",
   founderBio:
-    "With an MSc in Industrial & Organizational Psychology, I bring a unique, data-driven \"lens\" to the world of career development. I don't just look at what jobs are available; I understand the psychological DNA of how people thrive in organizations. As a Certified Career Counselor who has guided 70+ clients through their professional pivots, I specialize in helping students from 8th to 12th grade break away from the herd to find their authentic flight path. My background is rooted in 2+ years of experience as a School Counselor, giving me a deep, contextual understanding of the academic pressures and emotional hurdles today's students face. At UDAAN, I combine this professional expertise with a commitment to providing a safe, non-judgmental space where you are truly heard. Whether we are decoding your career path or navigating personal transitions, my goal is to provide the empathy and expert training needed to turn your \"what ifs\" into a confident \"what's next.\"",
+    "With an MSc in Industrial & Organizational Psychology, I bring a unique, data-driven \"lens\" to the world of career development. I don't just look at what jobs are available; I understand the psychological DNA of how people thrive in organizations. As a Certified Career Counselor who has guided 70+ clients through their professional pivots, I specialize in helping students from 8th to 12th grade break away from the herd to find their authentic flight path. My background is rooted in 2+ years of experience as a School Counselor, giving me a deep, contextual understanding of the academic pressures and emotional hurdles today's students face. At Udaan, I combine this professional expertise with a commitment to providing a safe, non-judgmental space where you are truly heard. Whether we are decoding your career path or navigating personal transitions, my goal is to provide the empathy and expert training needed to turn your \"what ifs\" into a confident \"what's next.\"",
   services: [
     {
       title: "Career counseling - The Mindset Bridge",
@@ -145,8 +145,8 @@ export default function HomePage() {
     <>
       <header className="site-header">
         <div className="wrap nav-wrap">
-          <a href="#home" className="brand brand-logo-link" aria-label="UDAAN Home">
-            <Image src={assetPath("/udaan-logo.png")} alt="UDAAN logo" width={180} height={158} className="nav-logo" priority />
+          <a href="#home" className="brand brand-logo-link" aria-label="Udaan Home">
+            <Image src={assetPath("/udaan-logo.png")} alt="Udaan logo" width={180} height={158} className="nav-logo" priority />
           </a>
           <nav>
             <a href="#home">Home</a>
@@ -163,7 +163,7 @@ export default function HomePage() {
         <div className="wrap">
           <p className="kicker">Career Counseling and Emotional Wellness</p>
           <p className="eyebrow">{content.tagline}</p>
-          <h1>{content.brandName} Career Counseling</h1>
+          <h1>{content.brandName}</h1>
           <p>{content.aboutBrand}</p>
           <div className="hero-cta-row">
             <a href="#packages" className="hero-btn">Explore Packages</a>
