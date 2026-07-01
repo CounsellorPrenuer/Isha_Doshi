@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 
-type Service = { title: string; description: string; whoFor: string };
+type Service = { title: string; description: string; whoFor?: string };
 type Contact = { phone: string; email: string; office: string; linkedin: string };
 type Content = {
   brandName: string;
@@ -60,6 +60,11 @@ const DEFAULT_CONTENT: Content = {
       whoFor:
         "Adult Individuals dealing with the emotional weight of life transitions, persistent stress, or the \"what if\" anxiety that prevents them from taking the next step in their personal or professional journey.",
     },
+    {
+      title: "Organizational workshop",
+      description:
+        "Interactive and customized workshops designed to enhance communication, teamwork, leadership, employee engagement, and workplace well-being. Through experiential activities, discussions, and practical tools, organizations can foster a positive work culture, improve performance, and support the holistic development of their teams.",
+    },
   ],
   testimonials: [
     "I thought career counseling was just going to be another lecture about getting good grades. But with you Isha ma'am, it was different.You didn't just give me a list of jobs; you helped me understand why I get bored with some things and super excited about others. Thank you for actually listening to me. — A.S., 12th Standard",
@@ -68,7 +73,7 @@ const DEFAULT_CONTENT: Content = {
     "I used to get so angry when people asked what I wanted to be because I had no idea. I thought you'd just give me a boring test, but talking to you was actually chill. You didn't judge me for liking gaming more than math. You helped me see how the things I'm already good at can actually become a real career. I feel way less confused now. — AR. 8th standard",
   ],
   contact: {
-    phone: "7338153662",
+    phone: "8431365040",
     email: "ishadoshi3019@gmail.com",
     office: "NIPANI",
     linkedin: "https://www.linkedin.com/in/isha-doshi-a9a460236",
@@ -200,7 +205,7 @@ export default function HomePage() {
               <article key={service.title} className="card">
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <p><strong>Who it is for:</strong> {service.whoFor}</p>
+                {service.whoFor && <p><strong>Who it is for:</strong> {service.whoFor}</p>}
               </article>
             ))}
           </div>

@@ -60,7 +60,7 @@ h3 { margin: 0 0 10px; color: var(--ink); font: 700 1.2rem Outfit, sans-serif; }
 }
 .inline-link { color: var(--accent); font-weight: 700; text-decoration: underline; }
 
-.service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
 .service-grid article { padding: 22px; }
 .services-cta {
   margin-top: 16px;
